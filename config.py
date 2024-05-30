@@ -5,8 +5,8 @@ from langchain_core.prompts import ChatPromptTemplate
 
 def load_environment():
     load_dotenv()
-    os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-    os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+    os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
     os.environ["LANGCHAIN_TRACING_V2"] = "true"  # Langsmith tracking
 
 # Initialize the language model
